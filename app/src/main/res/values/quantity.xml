@@ -1,0 +1,33 @@
+<resources>
+    <plurals name="count_today_classes">
+        <item quantity="one">Сегодня %1$d урок</item>
+        <item quantity="two">Сегодня %1$d урока</item>
+        <item quantity="few">Сегодня %1$d урока</item>
+        <item quantity="many">Сегодня %1$d уроков</item>
+        <item quantity="other">Сегодня %1$d уроков</item>
+    </plurals>
+
+    <plurals name="count_next_class">
+        <item quantity="one">%1$d-го будет %2$d урок</item>
+        <item quantity="two">%1$d-го будет %2$d урока</item>
+        <item quantity="few">%1$d-го будет %2$d урока</item>
+        <item quantity="many">%1$d-го будет %2$d уроков</item>
+        <item quantity="other">%1$d-го будет %2$d уроков</item>
+    </plurals>
+
+    <plurals name="expire_homework_timer">
+        <item quantity="one">%1$d день назад</item>
+        <item quantity="two">%1$d дня назад</item>
+        <item quantity="few">%1$d дня назад</item>
+        <item quantity="many">%1$d дней назад</item>
+        <item quantity="other">%1$d дней назад</item>
+    </plurals>
+
+    <plurals name="homework_timer">
+        <item quantity="one">через %1$d день</item>
+        <item quantity="two">через %1$d дня</item>
+        <item quantity="few">через %1$d дня</item>
+        <item quantity="many">через %1$d дней</item>
+        <item quantity="other">через %1$d дней</item>
+    </plurals>
+</resources>
