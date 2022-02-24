@@ -7,7 +7,7 @@ import ru.kirea.lessonsandexamtimer.data.Classes
 import ru.kirea.lessonsandexamtimer.databinding.ItemClassBinding
 
 class  HomeClassesAdapter(private val items: List<Classes>,
-                          private val listener: HomeClassesAdapterListener):
+                          private val listener: ClassesAdapterListener):
     RecyclerView.Adapter<HomeClassesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeClassesViewHolder {

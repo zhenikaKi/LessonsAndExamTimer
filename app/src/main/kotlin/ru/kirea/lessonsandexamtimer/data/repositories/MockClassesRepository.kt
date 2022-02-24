@@ -85,7 +85,6 @@ class MockClassesRepository: ClassesRepository {
                 }
             }
         }
-        Log.d(Consts.TAG_LOG, "Список уроков: $result")
         return result
     }
 
@@ -112,7 +111,6 @@ class MockClassesRepository: ClassesRepository {
         val result: MutableList<HomeWork> = mutableListOf()
         result.addAll(generateHomeWork(Random().nextInt(3), asExpire = true))
         result.addAll(generateHomeWork(Random().nextInt(5)+1, asExpire = false))
-        Log.d(Consts.TAG_LOG, "Домашняя работа: $result")
         return result
     }
 

@@ -74,8 +74,6 @@ class HomeService(private val repository: ClassesRepository) {
             return@filter calendarFilter.get(Calendar.DAY_OF_MONTH) == currentClassDay
         }.size
 
-        Log.d(Consts.TAG_LOG, "day = $day, currentClassDay = $currentClassDay, countClasses = $countClasses")
-
         return if (currentClassDay <= day) {
             resources.getQuantityString(R.plurals.count_today_classes, countClasses, countClasses)
         }

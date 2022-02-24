@@ -14,6 +14,7 @@ class App: Application() {
                 Modules.application,
                 Modules.bottomNavigationWindow,
                 Modules.homeWindow,
+                Modules.classesWindow,
             )
         }
     }

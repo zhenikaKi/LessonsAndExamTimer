@@ -14,12 +14,10 @@ import ru.kirea.lessonsandexamtimer.data.HomeWork
 import ru.kirea.lessonsandexamtimer.data.Tee
 import ru.kirea.lessonsandexamtimer.databinding.HomeFragmentBinding
 import ru.kirea.lessonsandexamtimer.di.Scopes
-import ru.kirea.lessonsandexamtimer.windows.tag.TagFragment
 
 class HomeFragment: BaseFragment<HomeFragmentBinding>(HomeFragmentBinding::inflate) {
 
     private val scope = KoinJavaComponent.getKoin().createScope<HomeFragment>()
-
     private val viewModel: HomeViewModel = scope.get(qualifier = named(Scopes.HOME_VIEW_MODEL))
 
     override fun afterOnCreateView() {
@@ -54,14 +52,13 @@ class HomeFragment: BaseFragment<HomeFragmentBinding>(HomeFragmentBinding::infla
                 state.currentClass,
                 state.countClasses)
         }
-
     }
 
     /** Сформировать список уроков */
     private fun setClasses(classes: List<Classes>, currentClass: Int, countClasses: String) {
-
+        Log.d(Consts.TAG_LOG, "renderData -> setClasses")
         binding?.let {
-            it.classesViewPager.adapter = HomeClassesAdapter(classes, object: HomeClassesAdapterListener {
+            it.classesViewPager.adapter = HomeClassesAdapter(classes, object: ClassesAdapterListener {
                 override fun buttonZoomClick(zoomUrl: String?) {
                     zoomUrl?.let { url ->
                         val zoom = Intent(Intent.ACTION_VIEW, Uri.parse(url))
@@ -81,6 +78,7 @@ class HomeFragment: BaseFragment<HomeFragmentBinding>(HomeFragmentBinding::infla
      * @param time связка остатка дней, часов и минут
      */
     private fun setTimeToExam(time: Tee<Long, Long, Long>) {
+        Log.d(Consts.TAG_LOG, "renderData -> setTimeToExam")
         val day = String.format("%02d", time.first)
         val hour = String.format("%02d", time.second)
         val min = String.format("%02d", time.third)
@@ -96,7 +94,7 @@ class HomeFragment: BaseFragment<HomeFragmentBinding>(HomeFragmentBinding::infla
 
     /** Заполнить список домашней работы */
     private fun setHomeWork(homework: List<HomeWork>) {
-        Log.d(Consts.TAG_LOG, "setHomeWork")
+        Log.d(Consts.TAG_LOG, "renderData -> setHomeWork")
         binding?.let {
             it.homeworkRecyclerview.adapter = HomeWorkAdapter(homework)
             it.homeworkRecyclerview.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)

@@ -9,6 +9,8 @@ import org.koin.dsl.module
 import ru.kirea.lessonsandexamtimer.MainActivity
 import ru.kirea.lessonsandexamtimer.data.repositories.ClassesRepository
 import ru.kirea.lessonsandexamtimer.data.repositories.MockClassesRepository
+import ru.kirea.lessonsandexamtimer.windows.classes.ClassesFragment
+import ru.kirea.lessonsandexamtimer.windows.classes.ClassesViewModel
 import ru.kirea.lessonsandexamtimer.windows.home.HomeFragment
 import ru.kirea.lessonsandexamtimer.windows.home.HomeService
 import ru.kirea.lessonsandexamtimer.windows.home.HomeViewModel
@@ -43,6 +45,19 @@ object Modules {
         scope<HomeFragment> {
             viewModel(qualifier = named(Scopes.HOME_VIEW_MODEL)) {
                 HomeViewModel(get(qualifier = named(Scopes.HOME_SERVICE)))
+            }
+
+            scoped<HomeService>(qualifier = named(Scopes.HOME_SERVICE)) {
+                HomeService(get(qualifier = named(Scopes.REPOSITORY)))
+            }
+        }
+    }
+
+    //модуль основного экрана
+    val classesWindow = module {
+        scope<ClassesFragment> {
+            viewModel(qualifier = named(Scopes.CLASSES_VIEW_MODEL)) {
+                ClassesViewModel(get(qualifier = named(Scopes.HOME_SERVICE)))
             }
 
             scoped<HomeService>(qualifier = named(Scopes.HOME_SERVICE)) {

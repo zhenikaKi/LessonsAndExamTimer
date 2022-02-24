@@ -9,5 +9,7 @@ object Scopes {
     const val HOME_VIEW_MODEL = "homeViewModel"
     const val HOME_SERVICE = "homeService"
 
+    const val CLASSES_VIEW_MODEL = "classesViewModel"
+
     const val REPOSITORY = "repository"
 }
