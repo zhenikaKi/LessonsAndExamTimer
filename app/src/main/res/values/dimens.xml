@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="fragment_name_text_size">20sp</dimen>
+
+    <!-- нижнее меню -->
+    <dimen name="bottom_navigation_padding_vertical">4dp</dimen>
+    <dimen name="bottom_navigation_padding_horizontal">20dp</dimen>
+    <dimen name="bottom_navigation_layout_margin">10dp</dimen>
+    <dimen name="bottom_navigation_icon_size">24dp</dimen>
+    <dimen name="bottom_navigation_radius">24dp</dimen>
+    <dimen name="bottom_navigation_icon_radius">20dp</dimen>
+
+    <!-- экраны -->
+    <dimen name="screen_padding_horizontal">30dp</dimen>
+    <dimen name="screen_padding_class_top">10dp</dimen>
+    <dimen name="screen_padding_class_start">50dp</dimen>
+    <dimen name="screen_padding_circle_horizontal">25dp</dimen>
+    <dimen name="screen_padding_class_horizontal">60dp</dimen>
+    <dimen name="screen_padding_vertical">20dp</dimen>
+    <dimen name="screen_big_card_radius">40dp</dimen>
+    <dimen name="screen_class_card_radius">30dp</dimen>
+    <dimen name="timer_number_radius">10dp</dimen>
+    <dimen name="title_text_size">18sp</dimen>
+    <dimen name="secondary_text_size">14sp</dimen>
+    <dimen name="timer_number_padding">12dp</dimen>
+    <dimen name="timer_number_margin">2dp</dimen>
+    <dimen name="classes_card_min_height">140dp</dimen>
+    <dimen name="button_zoom_size">60dp</dimen>
+    <dimen name="icon_zoom_size">32dp</dimen>
+    <dimen name="homework_timer_icon_size">24dp</dimen>
+    <dimen name="line_size">2dp</dimen>
+    <dimen name="circle_size">10dp</dimen>
+</resources>

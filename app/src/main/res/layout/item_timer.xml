@@ -1,0 +1,157 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/screen_big_card_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_timer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/big_card_gradient_background">
+
+        <!-- заголовок -->
+        <TextView
+            android:id="@+id/timer_title"
+            style="@style/TextTitleStyle"
+            android:paddingTop="@dimen/screen_padding_vertical"
+            android:text="@string/exam_question"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- дни -->
+        <LinearLayout
+            android:id="@+id/timer_day_block_1"
+            style="@style/TimerNumberBackgroundStyle"
+            android:layout_marginStart="@dimen/timer_number_padding"
+            android:layout_marginTop="@dimen/screen_padding_vertical"
+            app:layout_constraintEnd_toStartOf="@id/timer_day_block_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timer_title"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <TextView
+                android:id="@+id/timer_day_1"
+                style="@style/TimerNumberStyle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timer_day_block_2"
+            style="@style/TimerNumberBackgroundStyle"
+            app:layout_constraintEnd_toStartOf="@id/time_separator_1"
+            app:layout_constraintStart_toEndOf="@id/timer_day_block_1"
+            app:layout_constraintTop_toTopOf="@id/timer_day_block_1"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <TextView
+                android:id="@+id/timer_day_2"
+                style="@style/TimerNumberStyle" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/time_separator_1"
+            style="@style/TimerNumberStyle"
+            android:padding="@dimen/timer_number_padding"
+            android:text="@string/time_separator"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/timer_day_block_2"
+            app:layout_constraintEnd_toStartOf="@id/timer_hour_block_1"
+            app:layout_constraintStart_toEndOf="@id/timer_day_block_2"
+            app:layout_constraintTop_toTopOf="@id/timer_day_block_2"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- часы -->
+        <LinearLayout
+            android:id="@+id/timer_hour_block_1"
+            style="@style/TimerNumberBackgroundStyle"
+            app:layout_constraintEnd_toStartOf="@id/timer_hour_block_2"
+            app:layout_constraintStart_toEndOf="@id/time_separator_1"
+            app:layout_constraintTop_toTopOf="@id/timer_day_block_1"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <TextView
+                android:id="@+id/timer_hour_1"
+                style="@style/TimerNumberStyle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timer_hour_block_2"
+            style="@style/TimerNumberBackgroundStyle"
+            app:layout_constraintEnd_toStartOf="@id/time_separator_2"
+            app:layout_constraintStart_toEndOf="@id/timer_hour_block_1"
+            app:layout_constraintTop_toTopOf="@id/timer_day_block_1"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <TextView
+                android:id="@+id/timer_hour_2"
+                style="@style/TimerNumberStyle" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/time_separator_2"
+            style="@style/TimerNumberStyle"
+            android:padding="@dimen/timer_number_padding"
+            android:text="@string/time_separator"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/timer_hour_block_2"
+            app:layout_constraintEnd_toStartOf="@id/timer_min_block_1"
+            app:layout_constraintStart_toEndOf="@id/timer_hour_block_2"
+            app:layout_constraintTop_toTopOf="@id/timer_hour_block_2"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- минуты -->
+        <LinearLayout
+            android:id="@+id/timer_min_block_1"
+            style="@style/TimerNumberBackgroundStyle"
+            app:layout_constraintEnd_toStartOf="@id/timer_min_block_2"
+            app:layout_constraintStart_toEndOf="@id/time_separator_2"
+            app:layout_constraintTop_toTopOf="@id/timer_day_block_1"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <TextView
+                android:id="@+id/timer_min_1"
+                style="@style/TimerNumberStyle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timer_min_block_2"
+            style="@style/TimerNumberBackgroundStyle"
+            android:layout_marginEnd="@dimen/timer_number_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/timer_min_block_1"
+            app:layout_constraintTop_toTopOf="@id/timer_day_block_1"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <TextView
+                android:id="@+id/timer_min_2"
+                style="@style/TimerNumberStyle" />
+        </LinearLayout>
+
+        <!-- подписи таймера -->
+        <TextView
+            android:id="@+id/timer_title_day"
+            style="@style/TimerNumberStyle"
+            android:layout_marginTop="@dimen/timer_number_margin"
+            android:text="@string/timer_day"
+            app:layout_constraintEnd_toEndOf="@id/timer_day_block_2"
+            app:layout_constraintStart_toStartOf="@id/timer_day_block_1"
+            app:layout_constraintTop_toBottomOf="@id/timer_day_block_1" />
+
+        <TextView
+            android:id="@+id/timer_title_hour"
+            style="@style/TimerNumberStyle"
+            android:text="@string/timer_hour"
+            app:layout_constraintEnd_toEndOf="@id/timer_hour_block_2"
+            app:layout_constraintStart_toStartOf="@id/timer_hour_block_1"
+            app:layout_constraintTop_toTopOf="@id/timer_title_day" />
+
+        <TextView
+            android:id="@+id/timer_title_min"
+            style="@style/TimerNumberStyle"
+            android:text="@string/timer_minute"
+            app:layout_constraintEnd_toEndOf="@id/timer_min_block_2"
+            app:layout_constraintStart_toStartOf="@id/timer_min_block_1"
+            app:layout_constraintTop_toTopOf="@id/timer_title_day" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

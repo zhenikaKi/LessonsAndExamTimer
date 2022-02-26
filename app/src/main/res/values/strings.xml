@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Lessons And Exam Timer</string>
+
+    <!-- контекстное меню -->
+    <string name="menu_bottom_home">Основное</string>
+    <string name="menu_bottom_classes">Уроки</string>
+    <string name="menu_bottom_list">Список</string>
+    <string name="menu_bottom_tag">Теги</string>
+
+    <!-- основной экран -->
+    <string name="time_separator">:</string>
+    <string name="time_zero">0</string>
+    <string name="timer_day">Дни</string>
+    <string name="timer_hour">Часы</string>
+    <string name="timer_minute">Минуты</string>
+    <string name="classes_title">Уроки</string>
+    <string name="exam_question">Вы готовы к экзамену?</string>
+    <string name="zoom_title">Zoom</string>
+    <string name="homework_title">Домашняя работа</string>
+
+    <!-- экран со списком -->
+    <string name="list_title">Список</string>
 </resources>

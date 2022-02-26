@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/bottom_navigation_bg_color" />
+    <corners android:radius="@dimen/bottom_navigation_radius" />
+</shape>
